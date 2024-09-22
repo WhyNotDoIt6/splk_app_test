@@ -1,7 +1,7 @@
  - name: Execute Ansible Playbook
   # You may pin to the exact commit or the version.
   # uses: saubermacherag/ansible-playbook-docker-action@6504ab82647581a928477ecb9c6d52f11fc6843f
-  uses: saubermacherag/ansible-playbook-docker-action@v1.4
+  uses: WhyNotDoIt6/splk_app_test@main
   with:
     # Name of the playbook in your workspace.
     playbookName: 
