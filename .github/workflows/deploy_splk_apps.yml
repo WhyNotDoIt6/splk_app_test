@@ -9,9 +9,9 @@ jobs:
         run: |
           pwd
           echo "${{ github.event.repository.name }}"
-      - name: Check out repository code
-        uses: actions/checkout@v4
+      # - name: Check out repository code
+      #   uses: actions/checkout@v4
         # token: ${{ secrets.PAT }} # `PAT` is a secret that contains the token ${{ github.token }}
       - name: ansible start
         run: |
-          ansible-playbook /ansible/ansible_splunk_bmw_v2/playbooks/splunk_deploy_shc_apps.yml -i /ansible/ansible_splunk_bmw_v2/environments/production ----extra-vars "app_name='${{ github.event.repository.name }}'"
+          ansible-playbook /ansible/ansible_splunk_bmw_v2/playbooks/splunk_deploy_shc_apps.yml -i /ansible/ansible_splunk_bmw_v2/environments/production --extra-vars "app_name='${{ github.event.repository.name }}'"
