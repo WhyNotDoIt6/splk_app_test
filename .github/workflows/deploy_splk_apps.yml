@@ -6,7 +6,7 @@ jobs:
     runs-on: self-hosted
     steps:
       - name: Print env
-        run: echo "${{ env }}"
+        run: pwd
       - name: Check out repository code
         uses: actions/checkout@v4
         # token: ${{ secrets.PAT }} # `PAT` is a secret that contains the token ${{ github.token }}
