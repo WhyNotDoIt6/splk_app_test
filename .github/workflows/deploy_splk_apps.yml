@@ -14,4 +14,4 @@ jobs:
         # token: ${{ secrets.PAT }} # `PAT` is a secret that contains the token ${{ github.token }}
       - name: ansible start
         run: |
-          ansible-playbook /ansible/ansible_splunk_bmw_v2/playbooks/splunk_deploy_shc_apps.yml -i /ansible/ansible_splunk_bmw_v2/environments/production --extra-vars "app_name='${{ github.event.repository.name }}'"
+          ansible-playbook /ansible/ansible_splunk_bmw_v2/playbooks/splunk_deploy_shc_apps.yml -i /ansible/ansible_splunk_bmw_v2/environments/production --extra-vars "app_name='${{ github.event.repository.name }}' work_folder=${{ github.workspace }}"
